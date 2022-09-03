@@ -11,7 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="BankTeruya" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="iN0-l3-epB" id="y6f-Ls-5Qa"/>
+                <outlet property="loginButton" destination="Erm-YM-dL6" id="Wmo-Pq-FPy"/>
+                <outlet property="passwordTextFied" destination="9Pz-7t-cLq" id="QPy-Nm-NCR"/>
+                <outlet property="usernameTextField" destination="HB5-Zj-rfO" id="mvx-GT-X6r"/>
+                <outlet property="view" destination="iN0-l3-epB" id="mgE-fG-GKs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -16,6 +16,11 @@
 		AE0D58D028C2F8C8005261D1 /* BankTeruyaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D58CF28C2F8C8005261D1 /* BankTeruyaUITests.swift */; };
 		AE0D58D228C2F8C8005261D1 /* BankTeruyaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D58D128C2F8C8005261D1 /* BankTeruyaUITestsLaunchTests.swift */; };
 		AE0D58DF28C2FD1E005261D1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0D58DE28C2FD1E005261D1 /* ViewController.xib */; };
+		AE0D58FA28C31A3E005261D1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D58F928C31A3E005261D1 /* LoginPresenter.swift */; };
+		AE0D58FD28C31A84005261D1 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D58FC28C31A84005261D1 /* LoginModel.swift */; };
+		AE0D590028C31CB6005261D1 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D58FF28C31CB6005261D1 /* LoginService.swift */; };
+		AE0D590328C31E9D005261D1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D590228C31E9D005261D1 /* Coordinator.swift */; };
+		AE0D590528C31EBF005261D1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D590428C31EBF005261D1 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		AE0D58CF28C2F8C8005261D1 /* BankTeruyaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTeruyaUITests.swift; sourceTree = "<group>"; };
 		AE0D58D128C2F8C8005261D1 /* BankTeruyaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankTeruyaUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AE0D58DE28C2FD1E005261D1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		AE0D58F928C31A3E005261D1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		AE0D58FC28C31A84005261D1 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		AE0D58FF28C31CB6005261D1 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		AE0D590228C31E9D005261D1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AE0D590428C31EBF005261D1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +109,15 @@
 		AE0D58AD28C2F8C4005261D1 /* BankTeruya */ = {
 			isa = PBXGroup;
 			children = (
+				AE0D590128C31E8E005261D1 /* Coordinator */,
+				AE0D58FE28C31CA6005261D1 /* Service */,
+				AE0D58FB28C31A75005261D1 /* Model */,
+				AE0D58F828C31A28005261D1 /* Presenter */,
+				AE0D58B228C2F8C4005261D1 /* ViewController.swift */,
 				AE0D58DE28C2FD1E005261D1 /* ViewController.xib */,
+				AE0D58F728C318C0005261D1 /* View */,
 				AE0D58AE28C2F8C4005261D1 /* AppDelegate.swift */,
 				AE0D58B028C2F8C4005261D1 /* SceneDelegate.swift */,
-				AE0D58B228C2F8C4005261D1 /* ViewController.swift */,
 				AE0D58B728C2F8C7005261D1 /* Assets.xcassets */,
 				AE0D58B928C2F8C7005261D1 /* LaunchScreen.storyboard */,
 				AE0D58BC28C2F8C7005261D1 /* Info.plist */,
@@ -125,6 +140,46 @@
 				AE0D58D128C2F8C8005261D1 /* BankTeruyaUITestsLaunchTests.swift */,
 			);
 			path = BankTeruyaUITests;
+			sourceTree = "<group>";
+		};
+		AE0D58F728C318C0005261D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AE0D58F828C31A28005261D1 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D58F928C31A3E005261D1 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		AE0D58FB28C31A75005261D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D58FC28C31A84005261D1 /* LoginModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE0D58FE28C31CA6005261D1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D58FF28C31CB6005261D1 /* LoginService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AE0D590128C31E8E005261D1 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AE0D590228C31E9D005261D1 /* Coordinator.swift */,
+				AE0D590428C31EBF005261D1 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +313,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE0D58FD28C31A84005261D1 /* LoginModel.swift in Sources */,
+				AE0D590028C31CB6005261D1 /* LoginService.swift in Sources */,
+				AE0D58FA28C31A3E005261D1 /* LoginPresenter.swift in Sources */,
 				AE0D58B328C2F8C4005261D1 /* ViewController.swift in Sources */,
+				AE0D590528C31EBF005261D1 /* AppCoordinator.swift in Sources */,
 				AE0D58AF28C2F8C4005261D1 /* AppDelegate.swift in Sources */,
 				AE0D58B128C2F8C4005261D1 /* SceneDelegate.swift in Sources */,
+				AE0D590328C31E9D005261D1 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
