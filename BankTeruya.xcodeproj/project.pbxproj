@@ -23,6 +23,9 @@
 		AE0D590528C31EBF005261D1 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D590428C31EBF005261D1 /* AppCoordinator.swift */; };
 		AE0D590928C44556005261D1 /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D590828C44556005261D1 /* AccountController.swift */; };
 		AE0D590B28C445AF005261D1 /* AccountController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AE0D590A28C445AF005261D1 /* AccountController.xib */; };
+		AE0D591128C44F57005261D1 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591028C44F57005261D1 /* AccountService.swift */; };
+		AE0D591328C45261005261D1 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591228C45261005261D1 /* AccountModel.swift */; };
+		AE0D591628C45558005261D1 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591528C45558005261D1 /* AccountData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		AE0D590428C31EBF005261D1 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		AE0D590828C44556005261D1 /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		AE0D590A28C445AF005261D1 /* AccountController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountController.xib; sourceTree = "<group>"; };
+		AE0D591028C44F57005261D1 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
+		AE0D591228C45261005261D1 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		AE0D591528C45558005261D1 /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				AE0D58FC28C31A84005261D1 /* LoginModel.swift */,
+				AE0D591228C45261005261D1 /* AccountModel.swift */,
+				AE0D591528C45558005261D1 /* AccountData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0D58FF28C31CB6005261D1 /* LoginService.swift */,
+				AE0D591028C44F57005261D1 /* AccountService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -323,10 +332,13 @@
 				AE0D58FD28C31A84005261D1 /* LoginModel.swift in Sources */,
 				AE0D590028C31CB6005261D1 /* LoginService.swift in Sources */,
 				AE0D58FA28C31A3E005261D1 /* LoginPresenter.swift in Sources */,
+				AE0D591128C44F57005261D1 /* AccountService.swift in Sources */,
 				AE0D58B328C2F8C4005261D1 /* ViewController.swift in Sources */,
 				AE0D590528C31EBF005261D1 /* AppCoordinator.swift in Sources */,
 				AE0D58AF28C2F8C4005261D1 /* AppDelegate.swift in Sources */,
+				AE0D591628C45558005261D1 /* AccountData.swift in Sources */,
 				AE0D590928C44556005261D1 /* AccountController.swift in Sources */,
+				AE0D591328C45261005261D1 /* AccountModel.swift in Sources */,
 				AE0D58B128C2F8C4005261D1 /* SceneDelegate.swift in Sources */,
 				AE0D590328C31E9D005261D1 /* Coordinator.swift in Sources */,
 			);
