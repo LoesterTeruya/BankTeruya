@@ -22,6 +22,7 @@ final class AppCoordinator: Coordinator {
         let loginViewController = ViewController(presenter: loginPresenter)
         loginPresenter.viewController = loginViewController
         
+        window?.frame = UIScreen.main.bounds
         window?.rootViewController = loginViewController
         window?.makeKeyAndVisible()
         

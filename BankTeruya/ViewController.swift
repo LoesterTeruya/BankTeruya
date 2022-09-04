@@ -41,10 +41,10 @@ class ViewController: UIViewController, LoginViewControllerProtocol {
 
     // MARK: Methods
     
-    @IBAction func loginButtonPressed(_ sender: Any) {
+    @IBAction func loginButton(_ sender: Any) {
         let username = usernameTextField.text ?? ""
         let password = passwordTextFied.text ?? ""
-        
+
         if self.presenter.isValidForm(username: username, password: password) {
             self.presenter.login(username: username, password: password)
         } else {
