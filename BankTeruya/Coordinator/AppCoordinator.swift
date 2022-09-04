@@ -38,4 +38,11 @@ extension AppCoordinator: LoginCoordinatorProtocol {
             self?.currentViewController = homeViewController
         })
     }
+    
+    func navigateToAccount(loginModel: LoginModel) {
+        let accountViewController = AccountController()
+        currentViewController?.present(accountViewController, animated: true, completion: { [weak self] in
+            self?.currentViewController = accountViewController
+        })
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 protocol LoginCoordinatorProtocol {
     func navigateToHome(loginModel: LoginModel)
+    func navigateToAccount(loginModel: LoginModel)
 }
 
 protocol LoginPresenterProtocol {
@@ -35,7 +36,7 @@ final class LoginPresenter: LoginPresenterProtocol {
             
             switch result {
             case .success(let loginModel):
-                self.coordinator.navigateToHome(loginModel: loginModel)
+                self.coordinator.navigateToAccount(loginModel: loginModel)
             case .failure(let error):
                 self.viewController?.presentAlert(errorMessage: error.localizedDescription)
             }
