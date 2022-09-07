@@ -8,7 +8,7 @@
 import UIKit
 
 
-class AccountController: UIViewController, AccountDelegate {
+class AccountController: UIViewController, AccountDelegate, PayDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
     
@@ -18,13 +18,16 @@ class AccountController: UIViewController, AccountDelegate {
     
     
     var accountService = AccountService()
+    var payService = PayService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         accountService.delegate = self
+        payService.delegate = self
         
         accountService.fetchAccount()
+        payService.fetchPay()
     }
 
     func didUpdateAccount(_ accountManager: AccountService, account: AccountModel) {
@@ -33,6 +36,10 @@ class AccountController: UIViewController, AccountDelegate {
             self.contaLabel.text = account.accountNumber
             self.saldoLabel.text = String(account.checkingAccountBalance)
         }
+    }
+    
+    func didUpdatePay(_ payManager: PayService, pay: [Any]) {
+        
     }
     
     func didFailWithError(error: Error) {

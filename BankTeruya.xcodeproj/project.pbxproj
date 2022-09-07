@@ -26,6 +26,9 @@
 		AE0D591128C44F57005261D1 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591028C44F57005261D1 /* AccountService.swift */; };
 		AE0D591328C45261005261D1 /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591228C45261005261D1 /* AccountModel.swift */; };
 		AE0D591628C45558005261D1 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591528C45558005261D1 /* AccountData.swift */; };
+		AE0D591828C864AB005261D1 /* PayService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591728C864AB005261D1 /* PayService.swift */; };
+		AE0D591A28C865B0005261D1 /* PayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591928C865B0005261D1 /* PayModel.swift */; };
+		AE0D591C28C8661B005261D1 /* PayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D591B28C8661B005261D1 /* PayData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +72,9 @@
 		AE0D591028C44F57005261D1 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		AE0D591228C45261005261D1 /* AccountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		AE0D591528C45558005261D1 /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
+		AE0D591728C864AB005261D1 /* PayService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayService.swift; sourceTree = "<group>"; };
+		AE0D591928C865B0005261D1 /* PayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayModel.swift; sourceTree = "<group>"; };
+		AE0D591B28C8661B005261D1 /* PayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,8 @@
 				AE0D58FC28C31A84005261D1 /* LoginModel.swift */,
 				AE0D591228C45261005261D1 /* AccountModel.swift */,
 				AE0D591528C45558005261D1 /* AccountData.swift */,
+				AE0D591928C865B0005261D1 /* PayModel.swift */,
+				AE0D591B28C8661B005261D1 /* PayData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +192,7 @@
 			children = (
 				AE0D58FF28C31CB6005261D1 /* LoginService.swift */,
 				AE0D591028C44F57005261D1 /* AccountService.swift */,
+				AE0D591728C864AB005261D1 /* PayService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -337,10 +346,13 @@
 				AE0D590528C31EBF005261D1 /* AppCoordinator.swift in Sources */,
 				AE0D58AF28C2F8C4005261D1 /* AppDelegate.swift in Sources */,
 				AE0D591628C45558005261D1 /* AccountData.swift in Sources */,
+				AE0D591A28C865B0005261D1 /* PayModel.swift in Sources */,
+				AE0D591C28C8661B005261D1 /* PayData.swift in Sources */,
 				AE0D590928C44556005261D1 /* AccountController.swift in Sources */,
 				AE0D591328C45261005261D1 /* AccountModel.swift in Sources */,
 				AE0D58B128C2F8C4005261D1 /* SceneDelegate.swift in Sources */,
 				AE0D590328C31E9D005261D1 /* Coordinator.swift in Sources */,
+				AE0D591828C864AB005261D1 /* PayService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
