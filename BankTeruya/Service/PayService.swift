@@ -22,6 +22,10 @@ class PayService {
         performRequest(with: accountURL)
     }
     
+    func getQnt() -> Int{
+        return performRequest2(with: accountURL)
+    }
+    
     func performRequest(with urlString: String) {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
@@ -56,4 +60,23 @@ class PayService {
             return nil
         }
     }
+    
+    func performRequest2(with urlString: String) -> Int {
+        var pay: [Any]?
+        if let url = URL(string: urlString) {
+            let session = URLSession(configuration: .default)
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    self.delegate?.didFailWithError(error: error!)
+                    return
+                }
+                if let safeData = data {
+                    pay = self.parseJSON(safeData)
+                }
+            }
+            task.resume()
+        }
+        return pay?.count ?? 0
+    }
+    
 }
