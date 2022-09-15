@@ -21,7 +21,7 @@ class AccountController: UIViewController, UITableViewDataSource, UITableViewDel
     var accountService = AccountService()
     var payService = PayService()
     
-    var arrPay = [Any]()
+    var arrPay = [PayModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +45,12 @@ class AccountController: UIViewController, UITableViewDataSource, UITableViewDel
         }
     }
     
-    func didUpdatePay(_ payManager: PayService, pay: [Any]) {
+    func didUpdatePay(_ payManager: PayService, pay: [PayModel]) {
         //print(pay)
+        arrPay=pay
+        DispatchQueue.main.async {
+            self.tablepay.reloadData()
+        }
     }
     
     func didFailWithError(error: Error) {
@@ -54,12 +58,15 @@ class AccountController: UIViewController, UITableViewDataSource, UITableViewDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return payService.getQnt()
+
+        return arrPay.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (tableView.dequeueReusableCell(withIdentifier: "TableController") as? TableController)!
         
-//        cell.contaLabel.text = "TESTE"
+        cell.contaLabel.text = "Conta de Luz"
+        cell.valorLabel.text = arrPay[indexPath.row].electricityBill
+        cell.dataLabel.text = arrPay[indexPath.row].paymentDate
         return cell
         
     }

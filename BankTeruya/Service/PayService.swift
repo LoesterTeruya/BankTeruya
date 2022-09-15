@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PayDelegate {
-    func didUpdatePay(_ payManager: PayService, pay: [Any])
+    func didUpdatePay(_ payManager: PayService, pay: [PayModel])
     func didFailWithError(error: Error)
 }
 
@@ -20,10 +20,6 @@ class PayService {
     
     func fetchPay(){
         performRequest(with: accountURL)
-    }
-    
-    func getQnt() -> Int{
-        return performRequest2(with: accountURL)
     }
     
     func performRequest(with urlString: String) {
@@ -44,13 +40,14 @@ class PayService {
         }
     }
     
-    func parseJSON(_ payData: Data) -> [Any]? {
+    func parseJSON(_ payData: Data) -> [PayModel]? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode([PayData].self, from: payData)
-            var payData = [Any]()
+            var payData = [PayModel]()
             for paydecoded in decodedData {
-                payData.append(paydecoded)
+                let payd = PayModel(paymentDate: paydecoded.paymentDate, electricityBill: paydecoded.electricityBill, id: paydecoded.id)
+                payData.append(payd)
             }
             
             return payData
@@ -60,23 +57,5 @@ class PayService {
             return nil
         }
     }
-    
-    func performRequest2(with urlString: String) -> Int {
-        var pay: [Any]?
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if error != nil {
-                    self.delegate?.didFailWithError(error: error!)
-                    return
-                }
-                if let safeData = data {
-                    pay = self.parseJSON(safeData)
-                }
-            }
-            task.resume()
-        }
-        return pay?.count ?? 0
-    }
-    
+
 }
